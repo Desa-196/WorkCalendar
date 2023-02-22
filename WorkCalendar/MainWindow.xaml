@@ -18,6 +18,7 @@
                 <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="20"/>
             </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Background="{Binding ElementName=TopPanel, Path=Background}" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown_1" />
             <Border Grid.Column="3" Padding="3" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown" Cursor="Hand" Background="{Binding ElementName=TopPanel, Path=Background}">
                 <Grid>
                     <Line  X1="0" Y1="0" X2="14" Y2="14" Stroke="White" StrokeThickness="3"/>

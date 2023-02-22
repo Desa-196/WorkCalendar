@@ -37,5 +37,10 @@ namespace WorkCalendar
         {
             WindowState = WindowState.Maximized;
         }
+
+        private void Grid_PreviewMouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }
