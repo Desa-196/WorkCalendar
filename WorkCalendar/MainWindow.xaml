@@ -24,7 +24,7 @@
                     <Line  X1="14" Y1="0" X2="0" Y2="14" Stroke="White" StrokeThickness="3"/>
                 </Grid>
             </Border>
-            <Border Grid.Column="2" Padding="3" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown" Cursor="Hand" Background="{Binding ElementName=TopPanel, Path=Background}" VerticalAlignment="Bottom">
+            <Border Grid.Column="2" Padding="3" PreviewMouseLeftButtonDown="Maximaze_PreviewMouseLeftButtonDown" Cursor="Hand" Background="{Binding ElementName=TopPanel, Path=Background}" VerticalAlignment="Bottom">
                 <Grid>
                     <Rectangle Width="14" Height="10" Fill="{Binding ElementName=TopPanel, Path=Background}" Stroke="White" StrokeThickness="2"/>
                 </Grid>

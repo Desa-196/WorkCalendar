@@ -33,5 +33,9 @@ namespace WorkCalendar
         {
             WindowState = WindowState.Minimized;
         }
+        private void Maximaze_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowState = WindowState.Maximized;
+        }
     }
 }
