@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkCalendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="400" WindowStyle ="None" ResizeMode="CanResizeWithGrip" AllowsTransparency="True">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FF91BDD1" Name="TopPanel">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="3" Padding="3" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown" Cursor="Hand" Background="{Binding ElementName=TopPanel, Path=Background}">
+                <Grid>
+                    <Line  X1="0" Y1="0" X2="14" Y2="14" Stroke="White" StrokeThickness="3"/>
+                    <Line  X1="14" Y1="0" X2="0" Y2="14" Stroke="White" StrokeThickness="3"/>
+                </Grid>
+            </Border>
+            <Border Grid.Column="2" Padding="3" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown" Cursor="Hand" Background="{Binding ElementName=TopPanel, Path=Background}" VerticalAlignment="Bottom">
+                <Grid>
+                    <Rectangle Width="14" Height="10" Fill="{Binding ElementName=TopPanel, Path=Background}" Stroke="White" StrokeThickness="2"/>
+                </Grid>
+            </Border>
+            <Border Grid.Column="1" Padding="3" PreviewMouseLeftButtonDown="Minimized_PreviewMouseLeftButtonDown" Cursor="Hand" Background="{Binding ElementName=TopPanel, Path=Background}">
+                <Grid>
+                    <Line  X1="0" Y1="13" X2="14" Y2="13" Stroke="White" StrokeThickness="3"/>
+                </Grid>
+            </Border>
+        </Grid>
         
     </Grid>
 </Window>
