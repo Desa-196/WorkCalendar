@@ -35,7 +35,15 @@ namespace WorkCalendar
         }
         private void Maximaze_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            WindowState = WindowState.Maximized;
+            if (WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+            }
+            else 
+            {
+                WindowState = WindowState.Maximized;
+            }
+            
         }
 
         private void Grid_PreviewMouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
